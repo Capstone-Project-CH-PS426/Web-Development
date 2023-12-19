@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Tracker</title>
+    <link rel="stylesheet" href="/css/foodtracker.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="navbar">
+        <div class="logo"><a href="index.html">SkinSolve</a></div>
+        <ul class="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="trackerprogres.html">Tracking</a></li>
+          <li><a href="profile.html">Profile</a></li>
+          <li class="logoutBtn"><a href="">Logout</a></li>
+          <!-- <li><a href="#Feedback">Feedback</a></li> -->
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <h1>Food Tracker</h1>
+      <div class="track-food">
+        <label for="food">Track Food</label>
+        <input
+          type="file"
+          id="food"
+          accept="image/*"
+          placeholder="+ add photo"
+          multiple
+        />
+      </div>
+      <div class="add-notes">
+        <label for="notes">Add Notes</label>
+        <textarea id="notes" placeholder="add your notes here"></textarea>
+      </div>
+      <button id="save">Save</button>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/c8e4d183c2.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      //get the save button element
+      const save = document.getElementById('save');
+
+      //add click event listener to the save button
+      save.addEventListener('click', function () {
+        //get the file input element
+        const food = document.getElementById('food');
+
+        //get the textarea element
+        const notes = document.getElementById('notes');
+
+        //check if the file input has a file
+        if (food.files.length > 0) {
+          //get the file object
+          const fileObj = food.files[0];
+
+          //get the file name, size, and type
+          const fileName = fileObj.name;
+          const fileSize = fileObj.size;
+          const fileType = fileObj.type;
+
+          //get the notes value
+          const notesValue = notes.value.trim();
+
+          //do something with the file object and the notes value, such as uploading them to a server
+          //you can use the fetch API, XMLHttpRequest, or other methods
+          //for example, you can use the following code to upload the file and the notes to a mock server
+          /*
+    const url = "https://jsonplaceholder.typicode.com/posts"; //a mock server that accepts POST requests
+    const formData = new FormData(); //create a FormData object to append the file and the notes
+    formData.append("file", fileObj); //append the file object with the key "file"
+    formData.append("notes", notesValue); //append the notes value with the key "notes"
+    fetch(url, { //use the fetch API to send the POST request
+      method: "POST",
+      body: formData
+    })
+    .then(response => response.json()) //convert the response to JSON
+    .then(data => {
+      //do something with the data, such as displaying a success message or navigating to the next page
+      alert("File and notes successfully uploaded with id " + data.id);
+      window.location.href = "nextpage.html"; //this is a placeholder, replace with actual navigation logic
+    })
+    .catch(error => {
+      //handle any errors, such as displaying an error message
+      alert("There was an error: " + error.message);
+    });
+    */
+
+          //for the sake of simplicity, we will just alert the file and notes information and navigate to the next page
+          alert(
+            'File name: ' +
+              fileName +
+              '\nFile size: ' +
+              fileSize +
+              '\nFile type: ' +
+              fileType +
+              '\nNotes: ' +
+              notesValue
+          );
+          window.location.href = 'skintracker.css'; //this is a placeholder, replace with actual navigation logic
+        } else {
+          //display an error message if the file input is empty
+          alert('You have not selected a file.');
+        }
+      });
+    </script>
+  </body>
+</html>

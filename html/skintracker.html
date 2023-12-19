@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skin Tracker</title>
+    <link rel="stylesheet" href="/css/skintracker.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="navbar">
+        <div class="logo"><a href="index.html">SkinSolve</a></div>
+        <ul class="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="trackerprogres.html">Tracking</a></li>
+          <li><a href="profile.html">Profile</a></li>
+          <li class="logoutBtn"><a href="">Logout</a></li>
+          <!-- <li><a href="#Feedback">Feedback</a></li> -->
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <h1>Skin Tracker</h1>
+      <div class="track-skin">
+        <label for="skin">Track Skin</label>
+        <input
+          type="file"
+          id="skin"
+          accept="image/*"
+          placeholder="+ add photo"
+          multiple
+        />
+      </div>
+      <div class="add-notes">
+        <label for="notes">Add Notes</label>
+        <textarea id="notes" placeholder="add your notes here"></textarea>
+      </div>
+      <button id="save">Save</button>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/c8e4d183c2.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      function saveNotes() {
+        var notes = document.getElementById('notes').value;
+
+        // Implement saving mechanism here e.g., local storage or send to server
+        localStorage.setItem('skinProgressNotes', notes);
+
+        alert('Your progress has been saved!');
+      }
+    </script>
+  </body>
+</html>

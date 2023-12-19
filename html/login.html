@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Halaman Login</title>
+    <link rel="stylesheet" href="/css/login.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo">
+        <img src="/img/logo.png" alt="Logo" />
+      </div>
+      <div class="form">
+        <p>Sudah siap wajah cerah dan sehat? Silakan login untuk melanjutkan</p>
+        <form id="form">
+          <div class="form-control">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Masukkan email" />
+            <small></small>
+          </div>
+          <div class="form-control">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              placeholder="Masukkan password"
+            />
+            <i class="fas" id="togglePassword"></i>
+            <small></small>
+          </div>
+          <button type="submit" id="submit">Masuk</button>
+        </form>
+        <p class="footer">atau <a href="register.html">daftar disini</a></p>
+      </div>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/c8e4d183c2.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      //get the form element
+      const form = document.getElementById('form');
+
+      //get the input elements
+      const email = document.getElementById('email');
+      const password = document.getElementById('password');
+
+      //get the toggle password icon
+      const togglePassword = document.getElementById('togglePassword');
+
+      //add submit event listener to the form
+      form.addEventListener('submit', function (e) {
+        //prevent the default behavior of the form
+        e.preventDefault();
+
+        //check the input values
+        checkInputs();
+      });
+
+      //add click event listener to the toggle password icon
+      togglePassword.addEventListener('click', function () {
+        //toggle the type attribute of the password input
+        password.type === 'password'
+          ? (password.type = 'text')
+          : (password.type = 'password');
+
+        //toggle the class name of the toggle password icon
+        togglePassword.classList.toggle('fa-eye-slash');
+      });
+
+      //define a function to check the input values
+      function checkInputs() {
+        //get the input values
+        const emailValue = email.value.trim();
+        const passwordValue = password.value.trim();
+
+        //validate the email input
+        if (emailValue === '') {
+          //show error message
+          setErrorFor(email, 'Email tidak boleh kosong');
+        } else if (!isEmail(emailValue)) {
+          //show error message
+          setErrorFor(email, 'Email tidak valid');
+        } else {
+          //show success message
+          setSuccessFor(email);
+        }
+
+        //validate the password input
+        if (passwordValue === '') {
+          //show error message
+          setErrorFor(password, 'Password tidak boleh kosong');
+        } else if (!isPassword(passwordValue)) {
+          //show error message
+          setErrorFor(
+            password,
+            'Password harus memiliki minimal 8 karakter, 1 huruf besar, 1 huruf kecil, dan 1 angka'
+          );
+        } else {
+          //show success message
+          setSuccessFor(password);
+        }
+      }
+
+      //define a function to show error message for a given input
+      function setErrorFor(input, message) {
+        //get the parent element of the input
+        const formControl = input.parentElement;
+
+        //get the small element for the error message
+        const small = formControl.querySelector('small');
+
+        //set the error message
+        small.innerText = message;
+
+        //add the error class to the form control
+        formControl.classList.add('error');
+      }
+
+      //define a function to show success message for a given input
+      function setSuccessFor(input) {
+        //get the parent element of the input
+        const formControl = input.parentElement;
+
+        //remove the error class from the form control
+        formControl.classList.remove('error');
+      }
+
+      //define a function to check if an email is valid
+      function isEmail(email) {
+        //use a regular expression to test the email format
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+      }
+
+      //define a function to check if a password is valid
+      function isPassword(password) {
+        //use a regular expression to test the password strength
+        return /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/.test(password);
+      }
+    </script>
+  </body>
+</html>

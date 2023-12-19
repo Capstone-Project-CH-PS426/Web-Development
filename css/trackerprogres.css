@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 75px;
+  background: #7e177a;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+nav .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  max-width: 90%;
+  background: #7e177a;
+  margin: auto;
+}
+nav .navbar .logo a {
+  color: #fff;
+  font-size: 27px;
+  font-weight: 600;
+  text-decoration: none;
+}
+nav .navbar .menu {
+  display: flex;
+}
+.navbar .menu li {
+  list-style: none;
+  margin: 0 15px;
+}
+.navbar .menu li a {
+  color: #fff;
+  font-size: 17px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+.header {
+  height: 50px;
+  background-color: #7e177a;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header h1 {
+  font-size: 20px;
+}
+
+.container {
+  max-width: 400px;
+  margin: 20px auto;
+  margin-top: 70px;
+}
+
+.section {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.section h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #7e177a;
+}
+
+.section .add {
+  color: #7e177a;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.section label:hover {
+  color: #5F005B;
+}
+
+.section .category {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.section .category h3 {
+  font-size: 14px;
+  color: #333;
+}
+
+.section .category .images {
+  display: flex;
+}
+
+.section .category .images img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 10px;
+  /* filter: blur(2px); */
+  margin-left: 5px;
+}
+
+.section .category .images img:first-child {
+  margin-left: 0;
+}
+
+/* Add styling for the today-header */
+.today-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* Adjust the "Today" header and "Add" button styles */
+.today-header h2 {
+  font-size: 20px;
+  margin-bottom: 0;
+}
+
+.today-header .add {
+  color: #7e177a;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px; /* Adjust the font size as needed */
+}

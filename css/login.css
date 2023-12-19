@@ -1,0 +1,117 @@
+/*reset default styles*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 400px;
+  margin: 80px auto;
+  padding: 30px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/*set logo styles*/
+.logo {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/*set form styles*/
+.form {
+  text-align: center;
+}
+
+.form h1 {
+  margin-bottom: 20px;
+  color: #7E177A;
+  text-transform: lowercase;
+}
+
+.form p {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.form-control {
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.form-control label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.form-control input {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  background-color: #fff;
+}
+
+.form-control input:focus {
+  border-color: #7E177A;
+}
+
+.form-control i {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.form-control small {
+  display: block;
+  margin-top: 5px;
+  color: #f44336;
+}
+
+.form button {
+  width: 100%;
+  height: 40px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #7E177A;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.form button:hover {
+  background-color: #5F005B;
+}
+
+.footer {
+  margin-top: 20px;
+  color: #333;
+}
+
+.footer a {
+  color: #7E177A;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}

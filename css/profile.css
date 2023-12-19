@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.profile-info {
+  text-align: center;
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.user-photo {
+  width: 150px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 24px;
+  color: #7e177a;
+}
+
+button {
+  width: 120px;
+  height: 40px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: #7e177a;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #5f005b;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+/* NAVBAR STYLE */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 75px;
+  background: #7e177a;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+nav .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  max-width: 90%;
+  background: #7e177a;
+  margin: auto;
+}
+nav .navbar .logo a {
+  color: #fff;
+  font-size: 27px;
+  font-weight: 600;
+  text-decoration: none;
+}
+nav .navbar .menu {
+  display: flex;
+}
+.navbar .menu li {
+  list-style: none;
+  margin: 0 15px;
+}
+.navbar .menu li a {
+  color: #fff;
+  font-size: 17px;
+  font-weight: 500;
+  text-decoration: none;
+}
+section {
+  padding: 20px;
+  margin-top: 70px;
+  /* display: flex; */
+  height: 100vh;
+  width: 100%;
+  /* align-items: center;
+    justify-content: center; */
+  color: #c744c3;
+  /* font-size: 70px; */
+}
+
+.button a {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: #fff;
+  background: #7e177a;
+  padding: 7px 12px;
+  font-size: 18px;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.15);
+}

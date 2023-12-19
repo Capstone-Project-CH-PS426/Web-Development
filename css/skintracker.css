@@ -1,0 +1,134 @@
+/*reset default styles*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 75px;
+  background: #7e177a;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+nav .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  max-width: 90%;
+  background: #7e177a;
+  margin: auto;
+}
+nav .navbar .logo a {
+  color: #fff;
+  font-size: 27px;
+  font-weight: 600;
+  text-decoration: none;
+}
+nav .navbar .menu {
+  display: flex;
+}
+.navbar .menu li {
+  list-style: none;
+  margin: 0 15px;
+}
+.navbar .menu li a {
+  color: #fff;
+  font-size: 17px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+/*set container styles*/
+.container {
+  width: 100%;
+  max-width: 400px;
+  margin: 150px auto;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/*set header styles*/
+h1 {
+  text-align: center;
+  color: #7e177a;
+  margin-bottom: 20px;
+}
+
+/*set track-skin styles*/
+.track-skin {
+  margin-bottom: 20px;
+}
+
+.track-skin label {
+  display: block;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.track-skin input {
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  background-color: #fff;
+}
+
+.track-skin input:focus {
+  border-color: #7e177a;
+}
+
+/*set add-notes styles*/
+.add-notes {
+  margin-bottom: 20px;
+}
+
+.add-notes label {
+  display: block;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.add-notes textarea {
+  display: block;
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  background-color: #fff;
+  resize: none;
+}
+
+.add-notes textarea:focus {
+  border-color: #7e177a;
+}
+
+/*set save button styles*/
+button {
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  background-color: #7e177a;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #5f005b;
+}

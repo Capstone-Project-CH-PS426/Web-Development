@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Antarmuka Web</title>
+    <link rel="stylesheet" href="/css/splash.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Tell us about your skin</h1>
+        <p>Choose one</p>
+      </div>
+      <div class="options">
+        <button class="option" id="dry">Dry</button>
+        <button class="option" id="oily">Oily</button>
+        <button class="option" id="normal">Normal</button>
+        <button class="option" id="combination">Combination</button>
+        <button class="option" id="sensitive">Sensitive</button>
+      </div>
+      <div class="footer">
+        <button class="next" id="next">Next</button>
+      </div>
+    </div>
+    <script>
+      //get the option buttons
+      const options = document.querySelectorAll('.option');
+
+      //add click event listeners to the option buttons
+      options.forEach(function (option) {
+        option.addEventListener('click', function () {
+          //remove the active class from all the option buttons
+          options.forEach(function (option) {
+            option.classList.remove('active');
+          });
+
+          //add the active class to the clicked option button
+          this.classList.add('active');
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+nav{
+ position: fixed;
+ left: 0;
+ top: 0;
+ width: 100%;
+ height: 75px;
+ background: #7E177A;
+ box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+nav .navbar{
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ height: 100%;
+ max-width: 90%;
+ background: #7E177A;
+ margin: auto;
+}
+nav .navbar .logo a{
+  color: #fff;
+  font-size: 27px;
+  font-weight: 600;
+  text-decoration: none;
+}
+nav .navbar .menu{
+  display: flex;
+}
+.navbar .menu li{
+  list-style: none;
+  margin: 0 15px;
+}
+.navbar .menu li a{
+  color: #fff;
+  font-size: 17px;
+  font-weight: 500;
+  text-decoration: none;
+}
+section{
+  padding: 20px;
+  margin-top: 70px;
+  /* display: flex; */
+  height: auto;
+  width: 100%;
+  /* align-items: center;
+  justify-content: center; */
+  /* font-size: 70px; */
+}
+
+section h1{
+  color: #7E177A;
+}
+
+#Recommendation-Food{
+  background: #f2f2f2;
+}
+
+#Recommendation-Product{
+  background: #fff;
+}
+
+
+
+.button a{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: #fff;
+  background: #7E177A;
+  padding: 7px 12px;;
+  font-size: 18px;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.15);
+}
+
+/* Updated Card styles */
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+.card {
+  max-width: 300px;
+  margin: 0 10px; /* Adjusted margin for spacing between cards */
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center content horizontally */
+  padding: 15px;
+}
+
+.card-icon {
+  font-size: 48px;
+  color: #7E177A;
+  margin-right: 10px; /* Adjusted the margin for spacing between icon and text */
+}
+
+.icon-text {
+  font-size: 18px;
+  color: #7E177A;
+}
+
+.card-content {
+  padding: 15px;
+  text-align: center;
+}
+
+.card-button {
+  text-align: center;
+  display: block;
+  width: 100%;
+  padding: 8px;
+  background-color: #7E177A;
+  color: #fff;
+  text-decoration: none; /* Remove underlines for anchor tag */
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card-button:hover {
+  background-color: #5F005B;
+}
+
+
+
+.image-card {
+  width: 200px; /* Set a fixed width for the card */
+  max-height: 400px;
+  margin-right: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover; /* Maintain aspect ratio and cover the container */
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
